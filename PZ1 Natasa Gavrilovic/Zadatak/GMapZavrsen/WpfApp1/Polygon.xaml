@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp1.Polygon"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Polygon"  Height="306.433" Width="500" Background="Black">
+    <Grid >
+
+
+        <Label Content="Fill Color:" FontWeight="Bold" Width="100" Height="30" Margin="10,30,382,215"  Foreground="White"></Label>
+        <ComboBox SelectedValuePath="Color"   Name="BojaComboBox" Width="170" Height="30" Margin="271,30,51,215"/>
+
+        <Label Content="Border Color:" FontWeight="Bold" Width="100" Height="30" Margin="10,65,382,180"  Foreground="White"></Label>
+        <ComboBox SelectedValuePath="Color"  Name="ColorComboBox" Width="170" Height="30" Margin="271,65,51,180"/>
+
+        <Label Content="Border Thickness:" FontWeight="Bold" Width="120" Height="30" Margin="10,100,362,145"  Foreground="White"></Label>
+        <TextBox BorderBrush="Black" Name="debljina" VerticalContentAlignment="Top" HorizontalAlignment="Center" Width="170" Height="30" Margin="271,100,51,145"/>
+
+        <Label Content="Text Content:" FontWeight="Bold" Width="120" Height="30" Margin="10,135,362,110" Foreground="White"/>
+        <Label Content="(optional)" Width="120" Height="30" Margin="111,135,261,110" Foreground="White"/>
+        <TextBox BorderBrush="White" x:Name="textContenct" VerticalContentAlignment="Top" HorizontalAlignment="Center" Width="170" Height="30" Margin="271,135,51,110"/>
+
+        <Label Content="Text Color:" FontWeight="Bold" Width="120" Height="30" Margin="10,170,362,75" Foreground="White"/>
+        <Label Content="(optional)" Width="120" Height="30" Margin="111,170,261,75" Foreground="White"/>
+        <ComboBox SelectedValuePath="Color" x:Name="TextComboBox" Height="30" Margin="271,170,51,75"/>
+
+        <Button  Content="Cancel" Width="80" Height="30" Margin="111,225,301,20" Click="Button_Click" Background="Gray" Foreground="Black" FontSize="18"/>
+        <Button  Content="Draw" Width="80" Height="30" Margin="271,225,141,20" Click="Button_Click_1" Background="Gray" Foreground="Black" FontSize="18" />
+
+    </Grid>
+</Window>

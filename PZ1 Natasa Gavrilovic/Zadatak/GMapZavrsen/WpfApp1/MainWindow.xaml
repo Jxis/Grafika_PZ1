@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gmf="clr-namespace:GMap.NET.WindowsForms;assembly=GMap.NET.WindowsForms"
+        xmlns:gm="clr-namespace:GMap.NET;assembly=GMap.NET.Core"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" 
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="PZ1 Gavrilovic Natasa PR3/2018" Height="800" Width="1800" Background="Black">
+ 
+ <DockPanel>
+
+        <Slider x:Name="slider" Minimum=".1" Maximum="10" Value="1" DockPanel.Dock="Top"/>
+        <Grid >
+            <StackPanel DockPanel.Dock="Top" Background="Black"  Orientation="Horizontal" VerticalAlignment="Top" Margin="10,10" Height="50">
+                <Button x:Name="LoadButton" Content="Load Model" Click="LoadButton_Click" Width="100"  Margin="10,10"/>
+
+                <Button  Name="DugmeElipsa" Content="Ellipse"  HorizontalAlignment="Left" Margin="10,10" Click="Button_Click_1" Width="100" />
+                <Button  Name="DugmePolygon" Content="Polygon" Height="30" Margin="10,10" Click="Button_Click_2" Width="100"/>
+                <Button Name="DugmeText" Content="Text"  Width="100"  Margin="10,10" Click="Button_Click_3" />
+                <Button  Content="Undo" Height="30" Margin="10,10" Click="Button_Click_5" Width="100"/>
+                <Button  Content="Redo" Height="30" Margin="10,10" Click="Button_Click_6" Width="100"/>
+                <Button  Content="Clear"  Height="30" Margin="10,10" Click="Button_Click_4" Width="100"/>
+               
+            </StackPanel>
+
+            <ScrollViewer Margin="0,60,0,0" HorizontalScrollBarVisibility="Visible">
+            <Canvas ClipToBounds="True" Height="600" Width="1000" x:Name="canvas" Margin="10,80,10,10" Background="Black" MouseRightButtonDown="Canvas_MouseRightButtonDown" MouseLeftButtonDown="Canvas_MouseLeftButtonDown" >
+                <Canvas.LayoutTransform>
+                    <ScaleTransform ScaleX="{Binding ElementName=slider, Path=Value}"
+                                ScaleY="{Binding ElementName=slider, Path=Value}"/>
+                </Canvas.LayoutTransform>
+            </Canvas> 
+            </ScrollViewer>
+
+        </Grid>
+
+        
+           
+        
+            
+  </DockPanel>
+
+</Window>

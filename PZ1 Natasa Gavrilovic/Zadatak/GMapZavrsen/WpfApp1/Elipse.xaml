@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfApp1.Elipse"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Elipse" Height="370.667" Width="500">
+    <Grid Background="Black">
+
+        <TextBox BorderBrush="White" x:Name="X" VerticalContentAlignment="Top" HorizontalAlignment="Center" Width="161" Height="30" Margin="239,29,92,281"/>
+        <Label Content="Radius X:" FontWeight="Bold" Width="100" Height="30" Margin="25,29,367,281" Foreground="White"/>
+
+        <Label Content="Radius Y:" FontWeight="Bold" Width="100" Height="30" Margin="25,64,367,246" Foreground="White"/>
+        <TextBox BorderBrush="White" x:Name="Y" VerticalContentAlignment="Top" HorizontalAlignment="Center" Width="161" Height="30" Margin="239,64,92,246"/>
+
+        <Label Content="Fill Color:" FontWeight="Bold" Width="100" Height="30" Margin="25,169,367,141" Foreground="White"/>
+        <ComboBox SelectedValuePath="Color" x:Name="BojaComboBox" Height="30" Margin="239,169,92,141"/>
+
+        <Label Content="Border Color:" FontWeight="Bold" Width="100" Height="30" Margin="25,99,367,211" Foreground="White"/>
+        <ComboBox SelectedValuePath="Color"  x:Name="ColorComboBox" Height="30" Margin="239,99,92,211"/>
+
+        <Label Content="Border Thickness:" FontWeight="Bold" Width="120" Height="30" Margin="25,134,347,176" Foreground="White"/>
+        <TextBox BorderBrush="White" x:Name="debljina" VerticalContentAlignment="Top" HorizontalAlignment="Center" Width="161" Height="30" Margin="239,134,92,176"/>
+
+        <Label Content="Text Content:" FontWeight="Bold" Width="120" Height="30" Margin="25,204,347,106" Foreground="White"/>
+        <Label Content="(optional)" Width="120" Height="30" Margin="119,204,253,106" Foreground="White"/>
+        <TextBox BorderBrush="White" x:Name="textContenct" VerticalContentAlignment="Top" HorizontalAlignment="Center" Width="161" Height="30" Margin="239,204,92,106"/>
+
+        <Label Content="Text Color:" FontWeight="Bold" Width="120" Height="30" Margin="25,239,347,71" Foreground="White"/>
+        <Label Content="(optional)" Width="120" Height="30" Margin="119,239,253,71" Foreground="White"/>
+        <ComboBox SelectedValuePath="Color" x:Name="TextComboBox" Height="30" Margin="239,239,92,71"/>
+
+        <Button  Content="Cancel" Width="80" Height="30" Margin="119,300,293,10" Click="Button_Click" Background="Gray" Foreground="Black" FontSize="18"/>
+        <Button  Content="Draw" Width="80" Height="30" Margin="239,300,173,10" Click="Button_Click_1" Background="Gray" Foreground="Black" FontSize="18"/>
+
+
+    </Grid>
+</Window>
